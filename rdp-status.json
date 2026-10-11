@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "hostname": "rdpajaaa-4",
   "os": "Microsoft Windows Server 2022 Datacenter",
   "os_build": "10.0.20348",
@@ -8,8 +8,8 @@
   "rdp_user": "FikProject",
   "rdp_listen": ":::3389 (svchost) | 0.0.0.0:3389 (svchost) + handshake ok via 127.0.0.1",
   "rdp_denyts": true,
-  "started_at": "2026-10-11T01:27:42Z",
-  "expires_at": "2026-10-11T07:22:42Z",
+  "started_at": "2026-10-11T04:09:00Z",
+  "expires_at": "2026-10-11T10:04:00Z",
   "duration_menit": 355,
   "run_id": "38101892718",
   "run_number": "4",
@@ -33,15 +33,15 @@
     "note": "Host siap dipakai klien XyDesk Remote mode Koneksi RDP (Host+Port tunnel). Kunci WinStations\\RDP-Tcp sengaja TIDAK ditulis supaya listener 3389 tidak mati di runner GitHub."
   },
   "grafis": {
-    "debug": "",
     "vulkan": "llvmpipe (LLVM 23.1.2, 256 bits) (PHYSICAL_DEVICE_TYPE_CPU)",
+    "mesa": "26.2.4",
     "adapters": "Microsoft Hyper-V Video",
     "note": "GPU software (CPU): OpenGL 4.6 (llvmpipe) + Vulkan lavapipe + WARP bawaan. Runner GitHub tanpa GPU fisik; 3D berat tetap lambat.",
-    "mesa": "26.2.4",
-    "loader": "vulkan-1.dll 1.4.363.0 (LunarG)",
-    "files": "opengl32.dll,libgallium_wgl.dll,vulkan_lvp.dll,vulkan-1.dll",
     "dir": "C:\\XyRDP\\grafis",
     "opengl": "4.6 (Core Profile) Mesa 26.2.4 (git-9a0169f2a7) | llvmpipe (LLVM 23.1.2, 256 bits) | Mesa",
+    "debug": "",
+    "files": "opengl32.dll,libgallium_wgl.dll,vulkan_lvp.dll,vulkan-1.dll",
+    "loader": "vulkan-1.dll 1.4.363.0 (LunarG)",
     "mode": "software",
     "install": "mesa 26.2.4.0 [Mesa/X.org]"
   },
@@ -55,20 +55,19 @@
     "admin": true
   },
   "akses": {
+    "mode": "tailscale",
     "tailscale": {
-      "status": "ok",
+      "hostname": "rdpajaaa-4",
+      "magicdns": "rdpajaaa-4.taile5752d.ts.net.",
+      "ip": "100.69.125.75",
       "note": "HP/PC harus login Tailscale pada tailnet yang sama. TCP 3389 harus diizinkan ACL.",
-      "ip": "",
-      "magicdns": "",
-      "hostname": "",
-      "funnel_addr": ""
-    },
-    "mode": "tailscale"
+      "status": "ok"
+    }
   },
   "media": {
-    "verification": "Login ulang, aktifkan mic di XyDesk dan izinkan Android. Uji Windows Settings > Sound > Input; kebijakan aktif bukan bukti capture end-to-end.",
     "audio_output": "rdp_playback_enabled",
     "microphone": "rdp_capture_enabled",
+    "verification": "Login ulang, aktifkan mic di XyDesk dan izinkan Android. Uji Windows Settings > Sound > Input; kebijakan aktif bukan bukti capture end-to-end.",
     "wallpaper": "xyverse_configured_for_user_logon"
   },
   "games": {
@@ -80,11 +79,11 @@
       "status": "disabled",
       "note": "Tidak dipilih"
     },
-    "minecraft_bedrock": {
+    "samp": {
       "status": "disabled",
       "note": "Tidak dipilih"
     },
-    "samp": {
+    "minecraft_bedrock": {
       "status": "disabled",
       "note": "Tidak dipilih"
     }
@@ -92,10 +91,8 @@
   "game_environment": {
     "play_tested": false,
     "runner": "github",
+    "os": "Microsoft Windows Server 2022 Datacenter",
     "hypervisor_present": true,
-    "windows_server": true,
-    "os": "Microsoft Windows Server 2022 Datacenter"
-  },
-  "heartbeat_at": "2026-10-11T03:45:22.005063Z",
-  "stopped_at": "2026-10-11T03:49:38Z"
+    "windows_server": true
+  }
 }
